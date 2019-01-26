@@ -1,0 +1,71 @@
+# 功能
+可以用来实现点击时的波纹效果
+
+# 使用示例
+### RippleBlock的用法
+``` jsx
+import { RippleBlock } from 'do-ripple'
+
+class Button extends React.Component {
+  redner(){
+  retrun (
+      <RippleBlock className="btn">
+        Click Here
+      </RippleBlock>
+    )
+  }
+}
+
+```
+
+### 只使用Ripple
+
+``` jsx
+import { Ripple } from 'do-ripple'
+
+class Button extends React.Component {
+  $ripple = React.createRef()
+
+  handleMouseDown = e => {
+    this.$ripple.current.createRipple(e)
+    this.props.onMouseDown && this.props.onMouseDown(e)
+  }
+
+  render() {
+    const { children, className, ...rest } = this.props
+
+    return (
+      <button 
+        {...rest}
+        className={classnames('btn', 'do-ripple-block', className)} 
+        onMouseDown={this.handleMouseDown} 
+      >
+        <span className="do-ripple-content">{children}</span>
+        <Ripple ref={this.$ripple} rippleColor="#39f"/>
+      </button>
+    )
+  }
+}
+```
+* 如果使用第二种方式的话记得要给外层添加.do-ripple-block，同时也要给内容添加 .do-ripple-content，否则会出现样式问题
+
+### 例子中的相关样式
+``` scss
+.btn {
+  padding: 12px 50px;
+  border: 1px solid #ddd;
+  border-radius: 30px;
+  display: inline-block;
+  cursor: pointer;
+  font: 400 18px system-ui;
+  vertical-align: middle;
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}
+```
