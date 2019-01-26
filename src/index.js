@@ -47,7 +47,7 @@ export class Ripple extends React.PureComponent {
   $ripples = null
 
   createRipple = e => {
-    if(e.button !== 0) return
+    if (e.button !== 0) return
     const rippleGroup = this.$ripples
     const target = e.currentTarget
 
@@ -77,7 +77,7 @@ export class Ripple extends React.PureComponent {
     target.addEventListener('mouseout', remove)
   }
 
-  render(){
+  render() {
     return (
       <div className="do-ripple-group" ref={el => this.$ripples = el} />
     )
@@ -91,7 +91,7 @@ export class RippleBlock extends React.PureComponent {
     this.props.handleMouseDown && this.props.handleMouseDown(e)
     this.$ripples.createRipple(e)
   }
-  
+
   render() {
     const { onMouseDown, onMouseUp, children, className, rippleColor, ...rest } = this.props
 
@@ -103,8 +103,34 @@ export class RippleBlock extends React.PureComponent {
         onMouseUp={this.handleMouseUp}
       >
         <span className="do-ripple-content">{children}</span>
-        <Ripple ref={el => this.$ripples = el} rippleColor={rippleColor}/>
+        <Ripple ref={el => this.$ripples = el} rippleColor={rippleColor} />
       </div>
     )
+  }
+}
+
+export function withRipple(Component, config) {
+  const { onMouseDown, children, className } = Component.props
+
+  return class extends React.PureComponent {
+    $ripples = null
+
+    handleMouseDown = e => {
+      onMouseDown && onMouseDown(e)
+      this.$ripples && this.$ripples.createRipple(e)
+    }
+
+    render() {
+      return React.cloneElement(Component, {
+        onMouseDown: this.handleMouseDown,
+        className: classnames(className, 'do-ripple-block'),
+        children: (
+          <React.Fragment>
+            <span className="do-ripple-content">{children}</span>,
+            <Ripple ref={el => this.$ripples = el} {...config} />
+          </React.Fragment>
+        )
+      })
+    }
   }
 }
