@@ -28,8 +28,7 @@ class Button extends React.Component {
 
 const code1 = `<RippleBlock className="btn">
   Click Here
-</RippleBlock>
-`
+</RippleBlock>`
 
 const code2 = `<RippleBlock className="btn" rippleColor="#f93">
   Click Here
@@ -40,8 +39,7 @@ const code2 = `<RippleBlock className="btn" rippleColor="#f93">
   rippleColor="rgba(255, 255, 255, 0.4)"
 >
   Click Here
-</RippleBlock>
-`
+</RippleBlock>`
 
 const code3 = `class RippleButton extends React.Component {
   $ripple = React.createRef()
