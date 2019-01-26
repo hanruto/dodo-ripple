@@ -1,5 +1,10 @@
+const path = require('path')
+
 module.exports = {
   entry: './examples/index.js',
+  output: {
+    filename: "main.js"
+  },
   module: {
     rules: [
       {
@@ -21,6 +26,6 @@ module.exports = {
     ]
   },
   devServer: {
-    port: 1998
+    port: 1998,
   }
 }
