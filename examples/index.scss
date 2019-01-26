@@ -1,0 +1,25 @@
+.btn {
+  padding: 12px 50px;
+  border: 1px solid #ddd;
+  border-radius: 30px;
+  display: inline-block;
+  cursor: pointer;
+  font: 400 18px system-ui;
+  vertical-align: middle;
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}
+
+body {
+  text-align: center;
+}
+
+h2 {
+  font-weight: 200;
+}
