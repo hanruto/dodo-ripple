@@ -1,6 +1,5 @@
 import * as React from 'react'
 import classnames from 'classnames'
-import './index.scss'
 
 
 const dur = 400

@@ -4,15 +4,20 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "webpack-dev-server --config ./webpack.config.js",
-    "build": "ts ./src ./lib"
+    "dev": "webpack-dev-server --mode development ./webpack.config.js",
+    "build": "webpack --mode production --config ./webpack.config.js",
+    "transpile": "./node_modules/@babel/cli/bin/babel.js ./src --out-file ./lib/index.js  --copy-files & sass ./src/index.scss ./lib/index.css"
   },
   "dependencies": {
     "classnames": "^2.2.6",
     "react": "^16.7.0",
     "react-dom": "^16.7.0"
   },
+  "resolutions": {
+    "babel-core": "^7.0.0-bridge"
+  },
   "devDependencies": {
+    "@babel/cli": "^7.2.3",
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.3.1",
     "@babel/preset-react": "^7.0.0",

@@ -1,6 +1,5 @@
 module.exports = {
   entry: './examples/index.js',
-  mode: 'development',
   module: {
     rules: [
       {

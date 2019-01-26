@@ -4,6 +4,7 @@ import classnames from 'classnames'
 import { RippleBlock, Ripple } from '../src'
 import './index.scss'
 
+console.log(123)
 
 class Button extends React.Component {
   $ripple = React.createRef()
