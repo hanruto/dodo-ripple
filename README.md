@@ -8,17 +8,21 @@ https://sowhitesocoll.github.io/dodo-ripple/
 ### RippleBlock的用法
 ``` jsx
 import { RippleBlock } from 'do-ripple'
+s
+const Button = (
+  <RippleBlock className="btn">
+    Click Here
+  </RippleBlock>
+)
+```
 
-class Button extends React.Component {
-  redner(){
-    retrun (
-      <RippleBlock className="btn">
-        Click Here
-      </RippleBlock>
-    )
-  }
-}
+### withRipple的用法
+``` jsx
+import { withRipple } from 'do-ripple'
 
+const Button = withRipple(
+  <button className="btn">Click Here</button>
+)
 ```
 
 ### 只使用Ripple
