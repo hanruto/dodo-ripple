@@ -1,9 +1,8 @@
 const path = require('path')
 
 module.exports = {
-  entry: './examples/src/index.js',
+  entry: './examples/index.js',
   output: {
-    path: path.join(__dirname, "examples/dist"),
     filename: "main.js"
   },
   module: {
@@ -28,6 +27,5 @@ module.exports = {
   },
   devServer: {
     port: 1998,
-    contentBase: './example/src'
   }
 }
