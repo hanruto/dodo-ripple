@@ -1,8 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import classnames from 'classnames'
-import { RippleBlock, Ripple } from '../src'
+import { RippleBlock, Ripple, withRipple } from '../src'
 import './index.scss'
+
 
 class Button extends React.Component {
   $ripple = React.createRef()
@@ -24,10 +25,10 @@ class Button extends React.Component {
   }
 }
 
+
 const code1 = `<RippleBlock className="btn">
   Click Here
-</RippleBlock>
-`
+</RippleBlock>`
 
 const code2 = `<RippleBlock className="btn" rippleColor="#f93">
   Click Here
@@ -38,10 +39,9 @@ const code2 = `<RippleBlock className="btn" rippleColor="#f93">
   rippleColor="rgba(255, 255, 255, 0.4)"
 >
   Click Here
-</RippleBlock>
-`
+</RippleBlock>`
 
-const code3 = `class Button extends React.Component {
+const code3 = `class RippleButton extends React.Component {
   $ripple = React.createRef()
 
   handleMouseDown = e => {
@@ -62,7 +62,14 @@ const code3 = `class Button extends React.Component {
       </button>
     )
   }
-}`
+}
+ReactDOM.render(<RippleButton/>, app)`
+
+const code4 = `withRipple(<button className="btn primary-btn">Click Here</button>)
+ReactDOM.render(<RippleButton/>, app)`
+
+const RippleButton = withRipple(<button className="btn primary-btn">Click Here</button>)
+
 class App extends React.Component {
   render() {
     return (
@@ -82,6 +89,10 @@ class App extends React.Component {
         <RippleBlock className="btn primary-btn" rippleColor="rgba(255, 255, 255, 0.4)">
           Click Here
         </RippleBlock>
+
+        <h3>Decorator</h3>
+        <pre><code>{code4}</code></pre>
+        <RippleButton/>
 
         <h3>Custom</h3>
         <pre><code>{code3}</code></pre>

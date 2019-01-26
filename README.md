@@ -1,6 +1,9 @@
 # 功能
 可以用来实现点击时的波纹效果
 
+# 演示
+https://sowhitesocoll.github.io/dodo-ripple/
+
 # 使用示例
 ### RippleBlock的用法
 ``` jsx
