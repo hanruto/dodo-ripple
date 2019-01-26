@@ -1,12 +1,12 @@
 {
   "name": "dodo-ripple",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "/lib/index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "webpack-dev-server --mode development ./webpack.config.js",
+    "dev": "webpack-dev-server --mode development --config ./webpack.config.js",
     "build": "webpack --mode production --config ./webpack.config.js",
-    "transpile": "./node_modules/@babel/cli/bin/babel.js ./src --out-file ./lib/index.js  --copy-files & sass ./src/index.scss ./lib/index.css"
+    "transpile": "./node_modules/@babel/cli/bin/babel.js ./src --out-file ./lib/index.js"
   },
   "dependencies": {
     "classnames": "^2.2.6",

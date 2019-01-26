@@ -1,5 +1,6 @@
 import * as React from 'react'
 import classnames from 'classnames'
+import './index.css'
 
 
 const dur = 400
@@ -106,8 +107,4 @@ export class RippleBlock extends React.PureComponent {
       </div>
     )
   }
-}
-
-export const withRipple = function(Component){
-  return Component
 }

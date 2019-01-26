@@ -1,5 +1,11 @@
+const path = require('path')
+
 module.exports = {
-  entry: './examples/index.js',
+  entry: './examples/src/index.js',
+  output: {
+    path: path.join(__dirname, "examples/dist"),
+    filename: "main.js"
+  },
   module: {
     rules: [
       {
@@ -21,6 +27,7 @@ module.exports = {
     ]
   },
   devServer: {
-    port: 1998
+    port: 1998,
+    contentBase: './example/src'
   }
 }
