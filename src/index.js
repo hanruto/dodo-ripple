@@ -126,7 +126,7 @@ export function withRipple(Component, config) {
         className: classnames(className, 'do-ripple-block'),
         children: (
           <React.Fragment>
-            <span className="do-ripple-content">{children}</span>,
+            <span className="do-ripple-content">{children}</span>
             <Ripple ref={el => this.$ripples = el} {...config} />
           </React.Fragment>
         )
