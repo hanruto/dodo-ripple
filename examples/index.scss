@@ -1,13 +1,13 @@
 .btn {
-  padding: 12px 50px;
-  border: 1px solid #ddd;
+  padding: 10px 40px;
+  border: 1px solid #999;
   border-radius: 30px;
   display: inline-block;
   cursor: pointer;
-  font: 400 18px system-ui;
+  font: 400 16px system-ui;
   vertical-align: middle;
   box-sizing: border-box;
-
+  color: #666;
   overflow: hidden;
 
   &:active,
@@ -16,10 +16,32 @@
   }
 }
 
+.primary-btn {
+  border-color: #39f;
+  background-color: #39f;
+  color: #fff;
+  margin-left: 10px;
+}
+
 body {
-  text-align: center;
+  width: 650px;
+  margin: 0 auto;
+  padding-bottom: 40px;
 }
 
 h2 {
   font-weight: 200;
+}
+
+h3 {
+  margin-top: 40px;
+}
+
+pre {
+  text-align: left;
+  background-color: #eee;
+  padding: 15px 20px;
+  line-height: 1.6em;
+  border-radius: 3px;
+  margin-bottom: 20px;
 }
