@@ -83,7 +83,7 @@ class App extends React.Component {
 
         <h3>Modify Color</h3>
         <pre><code>{code2}</code></pre>
-        <RippleBlock className="btn" rippleColor="#f93">
+        <RippleBlock className="btn" rippleColor="#39f">
           Click Here
         </RippleBlock>
         <RippleBlock className="btn primary-btn" rippleColor="rgba(255, 255, 255, 0.4)">

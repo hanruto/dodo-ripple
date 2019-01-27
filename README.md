@@ -1,13 +1,17 @@
-# 功能
+## 功能
 可以用来实现点击时的波纹效果
 
-# 演示
+## 演示
 https://sowhitesocoll.github.io/dodo-ripple/
 
-# 使用示例
-### RippleBlock的用法
+## 使用
+安装
+```
+yarn add 'dodo-ripple'
+```
+#### RippleBlock的用法
 ``` jsx
-import { RippleBlock } from 'do-ripple'
+import { RippleBlock } from 'dodo-ripple'
 s
 const Button = (
   <RippleBlock className="btn">
@@ -16,19 +20,19 @@ const Button = (
 )
 ```
 
-### withRipple的用法
+#### withRipple的用法
 ``` jsx
-import { withRipple } from 'do-ripple'
+import { withRipple } from 'dodo-ripple'
 
 const Button = withRipple(
   <button className="btn">Click Here</button>
 )
 ```
 
-### 只使用Ripple
+#### 只使用Ripple
 
 ``` jsx
-import { Ripple } from 'do-ripple'
+import { Ripple } from 'dodo-ripple'
 
 class Button extends React.Component {
   $ripple = React.createRef()
@@ -56,7 +60,7 @@ class Button extends React.Component {
 ```
 * 如果使用第二种方式的话记得要给外层添加.do-ripple-block，同时也要给内容添加 .do-ripple-content，否则会出现样式问题
 
-### 例子中的相关样式
+#### 例子中的相关样式
 ``` scss
 .btn {
   padding: 12px 50px;
