@@ -62,21 +62,12 @@ const code3 = `class RippleButton extends React.Component {
 
     return (
       <button 
-        className={classnames(
-          'btn', 
-          'do-ripple-block', 
-          className
-        )} 
+        className={classnames('btn', 'do-ripple-block', className)} 
         onMouseDown={this.handleMouseDown} 
         {...rest}
       >
-        <span className="do-ripple-content">
-          {children}
-        </span>
-        <Ripple 
-          ref={this.$ripple} 
-          rippleColor="rgba(0, 0, 0, 0.2)"
-        />
+        <span className="do-ripple-content">{children}</span>
+        <Ripple ref={this.$ripple} rippleColor="rgba(0, 0, 0, 0.2)" />
       </button>
     )
   }
