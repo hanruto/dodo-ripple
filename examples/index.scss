@@ -10,7 +10,7 @@
   color: #666;
   overflow: hidden;
   -webkit-tap-highlight-color: transparent;
-  
+
   &:active,
   &:focus {
     outline: none;
@@ -25,9 +25,13 @@
 }
 
 body {
-  width: 650px;
   margin: 0 auto;
-  padding-bottom: 40px;
+  padding: 20px 20px 40px 20px;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 h2 {
@@ -45,4 +49,5 @@ pre {
   line-height: 1.6em;
   border-radius: 3px;
   margin-bottom: 20px;
+  overflow-x: auto;
 }
