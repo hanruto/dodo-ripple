@@ -9,7 +9,8 @@
   box-sizing: border-box;
   color: #666;
   overflow: hidden;
-
+  -webkit-tap-highlight-color: transparent;
+  
   &:active,
   &:focus {
     outline: none;

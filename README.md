@@ -71,7 +71,7 @@ class Button extends React.Component {
   font: 400 18px system-ui;
   vertical-align: middle;
   box-sizing: border-box;
-
+  -webkit-tap-highlight-color: transparent;
   overflow: hidden;
 
   &:active,
