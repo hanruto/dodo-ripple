@@ -30,7 +30,10 @@ const code1 = `<RippleBlock className="btn">
   Click Here
 </RippleBlock>`
 
-const code2 = `<RippleBlock className="btn" rippleColor="#f93">
+const code2 = `<RippleBlock 
+  className="btn" 
+  rippleColor="#f93"
+>
   Click Here
 </RippleBlock>
 
@@ -46,14 +49,20 @@ const code3 = `class RippleButton extends React.Component {
 
   handleMouseDown = e => {
     this.$ripple.current.createRipple(e)
-    this.props.onMouseDown && this.props.onMouseDown(e)
+    this.props.onMouseDown 
+    && this.props.onMouseDown(e)
   }
 
   render() {
-    const { children, className, ...rest } = this.props
+    const { 
+      children, 
+      className, 
+      ...rest 
+    } = this.props
 
     return (
-      <button className={classnames('btn', 'do-ripple-block', className)} 
+      <button 
+        className={classnames('btn', 'do-ripple-block', className)} 
         onMouseDown={this.handleMouseDown} 
         {...rest}
       >
@@ -65,7 +74,11 @@ const code3 = `class RippleButton extends React.Component {
 }
 ReactDOM.render(<RippleButton/>, app)`
 
-const code4 = `withRipple(<button className="btn primary-btn">Click Here</button>)
+const code4 = `withRipple(
+  <button className="btn primary-btn">
+    Click Here
+  </button>
+)
 ReactDOM.render(<RippleButton/>, app)`
 
 const RippleButton = withRipple(<button className="btn primary-btn">Click Here</button>)
@@ -73,8 +86,8 @@ const RippleButton = withRipple(<button className="btn primary-btn">Click Here</
 class App extends React.Component {
   render() {
     return (
-      <div>
-        <h2>How to use ... ?</h2>
+      <div className="container">
+        <h2>How to use?</h2>
         <h3>Ripple Block</h3>
         <pre><code>{code1}</code></pre>
         <RippleBlock className="btn">
@@ -92,7 +105,7 @@ class App extends React.Component {
 
         <h3>Decorator</h3>
         <pre><code>{code4}</code></pre>
-        <RippleButton/>
+        <RippleButton />
 
         <h3>Custom</h3>
         <pre><code>{code3}</code></pre>

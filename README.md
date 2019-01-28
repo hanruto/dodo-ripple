@@ -12,7 +12,7 @@ yarn add 'dodo-ripple'
 #### RippleBlock的用法
 ``` jsx
 import { RippleBlock } from 'dodo-ripple'
-s
+
 const Button = (
   <RippleBlock className="btn">
     Click Here
