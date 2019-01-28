@@ -74,7 +74,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h2>How to use ... ?</h2>
+        <h2>How to use?</h2>
         <h3>Ripple Block</h3>
         <pre><code>{code1}</code></pre>
         <RippleBlock className="btn">
